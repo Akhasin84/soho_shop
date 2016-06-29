@@ -25,6 +25,7 @@ $globalWidth: 1400px;
 	position: absolute;
 	top: 5px;
     left: 40px;
+    z-index: 9;
 	& li {
 		display: block;
 		width: 120px;
