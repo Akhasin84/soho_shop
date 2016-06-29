@@ -12,7 +12,8 @@ body {
   border: 1px solid #f2f5f9;
   position: absolute;
   top: 5px;
-  left: 40px; }
+  left: 40px;
+  z-index: 9; }
   .slideRightMenu li {
     display: block;
     width: 120px;
