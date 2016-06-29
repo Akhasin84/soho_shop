@@ -249,7 +249,8 @@ header{
 }
 
 .special{
-	background: url(images/specialBack.png) center no-repeat;
+	background: url(images/specialBack.png) no-repeat;
+	background-position: cover;
 	text-align: left;
 	padding-left: 49px;
 	padding-top: 150px;
