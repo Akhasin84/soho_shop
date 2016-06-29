@@ -43,6 +43,9 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between;
     position: relative; }
+    @media (max-width: 1150px) {
+      header .headWrap {
+        width: 1150px; } }
     header .headWrap a {
       text-decoration: none;
       color: white;
@@ -158,15 +161,21 @@ header {
 .firstOrder {
   width: 1400px;
   margin: 0 auto; }
+  @media (max-width: 1150px) {
+    .firstOrder {
+      width: 1150px; } }
 
 .itemBlocks {
   display: inline-block;
-  width: 466px;
+  width: 33.33%;
   height: 467px;
   border: 1px solid #e8e8e8;
   padding-top: 49px;
   text-align: center;
   vertical-align: top; }
+  @media (max-width: 1150px) {
+    .itemBlocks {
+      width: 50%; } }
 
 .withBack {
   background-color: #f2f5f9; }

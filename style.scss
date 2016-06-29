@@ -51,6 +51,9 @@ header{
 	& .headWrap{
 		display: flex;
 		width: $globalWidth;
+		@media (max-width: 1150px) {
+		width: 1150px;
+		}
 		margin: 0 auto;
 		justify-content: space-between;
 		position: relative;
@@ -190,6 +193,9 @@ header{
 
 .firstOrder{
 	width: $globalWidth;
+	@media (max-width: 1150px) {
+		width: 1150px;
+		}
 	margin: 0 auto;
 	// white-space: nowrap;
 	// border: 1px solid red
@@ -197,7 +203,10 @@ header{
 
 .itemBlocks{
 	display: inline-block;
-	width: 466px;
+	width: 33.33%;
+	@media (max-width: 1150px) {
+		width: 50%;
+	}
 	height: 467px;
 	border: 1px solid #e8e8e8;
 	padding-top: 49px;
