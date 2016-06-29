@@ -1,0 +1,491 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+//variables//
+$BrandFont: 'Josefin Sans', sans-serif;
+$workFont: 'Work Sans', sans-serif;
+$monFont: 'Montserrat', sans-serif;
+$blackColor: #242424;
+$priceTagColor: #92cacc;
+$brandPink: #e0aac9;
+$brandBack: #f2f5f9;
+$globalWidth: 1400px;
+
+.slideRightMenu{
+	display: none;
+	padding: 0;
+	border: 1px solid $brandBack;
+	position: absolute;
+	top: 5px;
+    left: 40px;
+	& li {
+		display: block;
+		width: 120px;
+		height: 40px;
+		padding-bottom: 10px;
+		background-color: $brandBack;
+		& .menuLink{
+			text-decoration: none;
+			font-family: $BrandFont;
+			font-size: 24px;
+			color: $blackColor;
+			&:hover{
+				color: $brandPink;
+			}
+		}
+	}
+}
+
+
+header{
+	height: 60px;
+	background-color: $blackColor;
+	& .headWrap{
+		display: flex;
+		width: $globalWidth;
+		margin: 0 auto;
+		justify-content: space-between;
+		position: relative;
+		& a{
+			text-decoration: none;
+			color: white;
+			line-height: 65px;
+		}
+		& .brand{
+				font-family: $BrandFont;
+				font-size: 26px;
+				font-weight: 700;
+		}
+		& a .side{
+			display: inline-block;
+			width: 60px;
+			border: 1px solid #2e2e2e;
+		}
+		// & .menu:hover + .slideRightMenu{
+		// 	display: block;
+		// }
+	}
+}
+
+
+
+.sliderBlock{
+	background-color: $brandBack;
+	& .sliderWrap{
+		width: $globalWidth;
+		height: 700px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		& .innerSlide{
+			// overflow: hidden;
+			white-space: nowrap;
+			transition: all .5s;
+			& .slides{
+				display: inline-block;
+				// width: 1400px;
+				& .flexy{
+					display: flex;
+					width: $globalWidth;
+					justify-content: space-between;
+					padding: 100px 170px 0 170px;
+					& .itemInfo{
+						margin-top: 15%;
+						& h3{
+							color: $blackColor;
+							font-family: $BrandFont;
+							font-size: 40px;
+							font-weight: 700;
+							margin-bottom: 20px;
+						}
+						& .priceTag{
+							color: $priceTagColor;
+							font-family: $workFont;
+							font-size: 30px;
+							font-weight: 700;
+						}
+						& a{
+							color:$brandPink;
+							font-family: $workFont;
+							font-size: 20px;
+							font-weight: 500;
+							margin-left: 30px;
+						}
+					}
+					& .itemPic{
+						position: relative;
+						& .label{
+							width: 175px;
+							height: 175px;
+							border-radius: 50%;
+							background-color: $brandPink;
+							text-align: center;
+							padding-top: 12%;
+							position: absolute;
+						    top: -20px;
+						    left: 70px;
+							& span{
+								color: white;
+								font-family: $monFont;
+								font-size: 30px;
+								font-weight: 700;
+							}
+						}
+						& img{
+							position: inherit;
+						}
+					}
+				}
+			} ///////
+		}
+		& .slideNav{
+			position: absolute;
+			left: 170px;
+			bottom: 150px;
+			& .bulets{
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				margin-left: 15px;
+				background-color: #c1c4c7;
+				&:hover{
+					background-color: $brandPink;
+				}
+			}
+		}
+	}
+}
+
+.mainMenu{
+	width: 700px;
+	display: flex;
+	justify-content: space-between;
+	margin: 60px auto;
+	& a{
+		text-decoration: none;
+		font-family: $BrandFont;
+		font-size: 30px;
+		// line-height: 65px;
+		color: $blackColor;
+		border: 2px solid transparent;
+		&:hover{
+    		border-bottom-color: $brandPink;
+		}
+	}
+	& .active{
+		color: $brandPink;
+	}
+}
+
+//Item Blocks Global//////////////
+
+.firstOrder{
+	width: $globalWidth;
+	margin: 0 auto;
+	// white-space: nowrap;
+	// border: 1px solid red
+}
+
+.itemBlocks{
+	display: inline-block;
+	width: 466px;
+	height: 467px;
+	border: 1px solid #e8e8e8;
+	padding-top: 49px;
+	// items-align: center;
+	text-align: center;
+	vertical-align: top;
+}
+
+.withBack{
+	background-color: $brandBack;
+}
+
+.radio{
+	padding-top: 120px; //???????????????
+}
+
+.department{
+	color: darkgrey;
+	font-family: $workFont;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	// line-height: 30px;
+}
+
+.itemName{
+	color: $blackColor;
+	font-family: $BrandFont;
+	font-size: 26px;
+	font-weight: 600;
+	// line-height: 30px;
+}
+
+.priceTags{
+	color: $priceTagColor;
+	font-family: $workFont;
+	font-size: 22px;
+	font-weight: 600;
+	// line-height: 30px;
+}
+
+.special{
+	background: url(images/specialBack.png) center no-repeat;
+	text-align: left;
+	padding-left: 49px;
+	padding-top: 150px;
+	position: relative;
+	& .specialTag{
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 100px 100px 0 0;
+		border-color: $blackColor transparent transparent transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	& .rotate{
+		display: inline-block;
+		color: #fff;
+		font-family: $workFont;
+		font-size: 13px;
+		font-weight: 600;
+		transform: rotate(315deg);
+		position: absolute;
+	    top: 35px;
+	    left: 10px;
+	}
+	& h4{
+		color: #fff;
+		font-family: $BrandFont;
+		font-size: 30px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	& .newPrice{
+		color: #fff;
+		font-family: $workFont;
+		font-size: 22px;
+		font-weight: 600;
+	}
+	& .oldPrice{
+		color: #fff;
+		font-family: $workFont;
+		font-size: 14px;
+		text-decoration: line-through;
+	}
+}
+
+.discountAdd{
+	background-color: #df4b63;
+	& .number{
+		display: inline-block;
+		color: rgba(255, 255, 255, 0.5);
+		font-family: $workFont;
+		font-size: 116px;
+		font-weight: 600;
+	}
+	& .discount{
+		display: inline-block;
+		color: rgba(0, 0, 0, 0.2);
+		font-family: $workFont;
+		font-size: 116px;
+		font-weight: 600;
+		margin-left: -25px;
+	}
+	& h3{
+		color: rgba(255, 255, 255, 0.5);
+		font-family: $workFont;
+		font-size: 35px;
+		font-weight: 600;
+		text-transform: uppercase;
+		&::after{
+			content: '';
+			display: block;
+			width: 18px;
+			height: 2px;
+			background-color: #fff;
+			margin: 30px auto;
+		}
+	}
+	& p{
+		color: #fff;
+		font-family: $workFont;
+		font-size: 22px;
+		font-weight: 500;
+		padding: 0 70px;
+	}
+}
+
+.secondOrder{
+	width: $globalWidth;
+	margin: 0 auto;
+	display: none;
+}
+
+////////////////////////////////////
+
+.showMore{
+	// height: 68px;
+	background-color: $brandBack;
+	text-align: center;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	cursor: pointer;
+	& span{
+		color: $blackColor;
+		font-family: $BrandFont;
+		font-size: 22px;
+		font-weight: 700;
+	}
+}
+
+.socialAndForm{
+	width: 1160px;
+	margin: 80px auto;
+	display: flex;
+	justify-content: space-between;
+	& .socials{
+		display: inline-block;
+		& .inSocFlex{
+			display: flex;
+			width: 205px;
+			justify-content: space-between;
+		}
+	}
+	& .subscribeCall{
+		padding-left: 30px;
+		border-left-color: $brandBack;
+		padding-bottom: 15px;
+		& p{
+			color: $blackColor;
+			font-family: $BrandFont;
+			font-size: 26px;
+		}
+	}
+	& input {
+		width: 374px;
+		height: 58px;
+		border: 1px solid $brandBack;
+		padding-left: 20px;
+		color: #979797;
+		font-family: $BrandFont;
+		font-size: 20px;
+	}
+	& button{
+		width: 176px;
+		height: 58px;
+		background-color: #acdadc;
+		color: #fff;
+		font-family: $BrandFont;
+		font-size: 22px;
+		font-weight: 700;
+		border: 1px solid #acdadc;
+	}
+}
+
+footer{
+	background-color: $blackColor;
+	padding-top: 79px;
+	padding-bottom: 100px;
+	& .inside{
+		width: 1150px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		& .left{
+			width: 152px;
+			text-align: left;
+			& h6{
+				margin: 0;
+				color: #fff;
+				font-family: $BrandFont;
+				font-size: 40px;
+				font-weight: 700;
+			}
+		}
+		& .right{
+			width: 870px;
+			text-align: left;
+			& p{
+				color: #fff;
+				font-family: $workFont;
+				font-size: 18px;
+				margin-top: 0;
+				margin-bottom: 48px;
+			}
+			& .footerMenu{
+				display: inline-block;
+				vertical-align: top;
+				padding-left: 0;
+				list-style: none;
+				margin-right: 120px;
+				& a{
+					display: block;
+					padding-bottom: 10px;
+					color: #fff;
+					font-family: $BrandFont;
+					font-size: 18px;
+					font-weight: 600;
+					&:hover{
+						color: $priceTagColor;
+					}
+				}
+			}
+			& .payInfo{
+				display: inline-block;
+				padding-top: 10px;
+				& span{
+					display: block;
+					color: #fff;
+					font-family: $BrandFont;
+					font-size: 18px;
+					font-weight: 600;
+					padding-bottom: 10px;
+					& a{
+						text-decoration: underline;
+						cursor: pointer;
+					}
+				}
+				& .cards{
+					display: flex;
+					width: 198px;
+					margin-top: 10px;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+			}
+		}
+	}
+}
+
+
+////////adaptive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
